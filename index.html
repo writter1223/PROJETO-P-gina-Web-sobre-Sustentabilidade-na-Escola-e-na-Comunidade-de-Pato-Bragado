@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- Define que o documento está usando a versão mais recente do HTML -->
+<html lang="pt-br">
+<!-- Define que o conteúdo está em português brasileiro -->
+
+<head>
+  <meta charset="UTF-8">
+  <!-- Define o conjunto de caracteres usados, necessário para exibir acentuação corretamente -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Faz com que o site fique responsivo, ou seja, funcione bem em celulares e tablets -->
+
+  <title>Agricultura Digital</title>
+  <!-- Título que aparece na aba do navegador -->
+
+  <!-- Importa uma fonte estilizada do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Conecta ao arquivo externo de estilos CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ==========================================
+       1. MENU DE ACESSIBILIDADE FIXO NA TELA
+       ========================================== -->
+  <!-- Este menu permite que o usuário altere o tamanho da fonte,
+       ative o modo contraste e resete as configurações de acessibilidade -->
+  <div class="acessibilidade-wrapper">
+    <div class="acessibilidade-menu">
+      <button onclick="aumentarFonte()">A+</button>
+      <button onclick="diminuirFonte()">A−</button>
+      <button onclick="alternarContraste()">Contraste</button>
+      <button onclick="resetarAcessibilidade()">Resetar</button>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       2. CABEÇALHO PRINCIPAL DO SITE
+       ========================================== -->
+  <!-- Aqui está o título principal da página e alguns ícones decorativos.
+       Também aparece a assinatura do professor como autor do projeto. -->
+  <header class="site-header">
+    <h1>Agricultura Digital e Tecnologias no Campo</h1>
+
+    <!-- Ícones animados ou decorativos relacionados ao tema -->
+    <span class="icone-animado icone1">🌾</span>
+    <span class="icone-animado icone2">🚜</span>
+    <span class="icone-animado icone3">🌱</span>
+
+    <!-- Assinatura institucional -->
+    <div class="assinatura">
+      By Prof. Jacson Luft<br>
+      Matemática II - Programação<br>
+      Colégio Estadual Pato Bragado
+    </div>
+  </header>
+
+  <!-- ==========================================
+       3. BLOCOS DE CONTEÚDO TEMÁTICO
+       ========================================== -->
+  <!-- Cada bloco apresenta um tema diferente sobre tecnologia no campo -->
+
+  <!-- BLOCO 1: Agricultura de Precisão -->
+  <div class="div1">
+    <h2>AGRICULTURA DE PRECISÃO</h2>
+    <div class="img-flex-container">
+      <img src="agricultura_moderna.jpg" alt="agricultura de precisão">
+      <div class="img-texto texto-div1">
+        <p>A agricultura de precisão é um conjunto de tecnologias aplicadas ao campo...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCO 2: Agricultura 4.0 -->
+  <div class="div2">
+    <h2>AGRICULTURA 4.0</h2>
+    <div class="img-flex-container">
+      <img src="agricultura_4.0_capa.jpg" alt="Agricultura 4.0">
+      <div class="img-texto texto-div2">
+        <p>A Agricultura 4.0 representa a revolução digital no campo...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCO 3: Futuro da Agricultura -->
+  <div class="div3">
+    <h2>FUTURO DA AGRICULTURA</h2>
+    <div class="img-flex-container">
+      <img src="futuro_agricultura.jpg" alt="Futuro da Agricultura">
+      <div class="img-texto texto-div3">
+        <p>O futuro da agricultura está cada vez mais conectado à inovação...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCO 4: Modernização do Campo -->
+  <div class="div4">
+    <h2>MODERNIZAÇÃO DO CAMPO</h2>
+    <div class="img-flex-container">
+      <img src="moderno_2025.jpg" alt="Modernização do Campo">
+      <div class="img-texto texto-div4">
+        <p>Modernização do campo com máquinas, irrigação automatizada...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCO 5: Novas Tecnologias Agrícolas -->
+  <div class="div5">
+    <h2>NOVAS TECNOLOGIAS AGRÍCOLAS</h2>
+    <div class="img-flex-container">
+      <img src="tecnologia_agricultura.jpg" alt="Novas Tecnologias Agrícolas">
+      <div class="img-texto texto-div5">
+        <p>Drones, sensores e softwares estão revolucionando o campo...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       4. SCRIPTS DE ACESSIBILIDADE (JS BÁSICO)
+       ========================================== -->
+  <!-- Aqui estão os comandos em JavaScript que fazem funcionar
+       os botões de acessibilidade -->
+  <script>
+    let tamanhoFonte = 100;
+
+    function aumentarFonte() {
+      tamanhoFonte += 10;
+      document.documentElement.style.fontSize = tamanhoFonte + '%';
+    }
+
+    function diminuirFonte() {
+      if (tamanhoFonte > 50) {
+        tamanhoFonte -= 10;
+        document.documentElement.style.fontSize = tamanhoFonte + '%';
+      }
+    }
+
+    function alternarContraste() {
+      // Ativa ou desativa o modo contraste escuro
+      document.body.classList.toggle('contraste-ativo');
+    }
+
+    function resetarAcessibilidade() {
+      // Volta ao tamanho padrão e retira o modo contraste
+      tamanhoFonte = 100;
+      document.documentElement.style.fontSize = '100%';
+      document.body.classList.remove('contraste-ativo');
+    }
+  </script>
+
+</body>
+</html>
